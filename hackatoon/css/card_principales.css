@@ -1,0 +1,310 @@
+/*estilos para las cards*/
+.projcard {
+    width: calc(100% - 20px);
+    /* Todos los cards ocupan todo el ancho en modo de escritorio */
+    margin: 10px;
+    border-radius: 40px;
+    font-size: 18px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.projcard-container {
+    max-width: 90%;
+    /* Ancho máximo para evitar que se extienda demasiado */
+    display: flex;
+    flex-direction: column;
+    /* Centra verticalmente los elementos */
+    align-items: center;
+    /* Centra horizontalmente los elementos */
+    justify-content: center;
+    /* Centra verticalmente los elementos */
+    margin: 20px auto;
+    /* Margin automático en los lados para centrar horizontalmente */
+}
+
+.cards1 {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 40px;
+}
+
+.card-img-top {
+    z-index: -1;
+}
+
+
+/*estilos del formulario de envio*/
+.formulario-envio {
+    background: linear-gradient(90deg,
+            rgb(40, 42, 55, 1)30%,
+            rgb(40, 42, 55, 0.7)),
+        url(/images/psicologia.jpg);
+    margin: 40px auto;
+    padding: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    max-width: 1000px;
+    border-radius: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.formulario-envio h2 {
+    color: #f4f6f9;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.label-form {
+    font-size: 15px;
+    color: #ffff;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+input,
+textarea {
+    padding: 17px 14px;
+    border: 0;
+    background-color: #6c6d6e;
+    color: #ffff;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(1px);
+}
+
+.btn-form {
+    margin-top: 20px;
+    width: 150px;
+    align-self: center;
+    display: inline-block;
+}
+
+/*bordes para los input del form*/
+:focus {
+    outline: 2px solid #ffffff;
+}
+
+/*efecto glassing o transparencia */
+.projcard,
+.cards1 {
+    background: rgb(255, 255, 255, 0.1);
+    backdrop-filter: blur(1px);
+}
+
+/*efecto del cursor para las cards*/
+.projcard:hover,
+.cards1:hover,
+input:hover,
+textarea:hover,
+.btn-form:hover {
+    box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
+    transform: translate(0px, -5px);
+}
+
+.projcard-innerbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* Centrar verticalmente el contenido */
+    flex-direction: row;
+    /* Mostrar la imagen al lado en modo de escritorio */
+    text-align: center;
+    /* Centrar el texto en modo de escritorio */
+}
+
+
+.projcard-img {
+    border-radius: 150px;
+    width: 100%;
+    max-width: 500px;
+    /* Ajusta el tamaño máximo de la imagen según tus necesidades */
+    height: auto;
+    max-height: 450px;
+    /* Ajusta el tamaño máximo de la imagen según tus necesidades */
+    padding: 40px;
+}
+
+.projcard-textbox {
+    width: 100%;
+    font-size: 17px;
+    padding: 20px;
+    /* Agregar espacio alrededor del texto */
+    text-align: center;
+    /* Centrar el texto en modo de escritorio */
+}
+
+.projcard-textbox::before,
+.projcard-textbox::after {
+    display: none;
+}
+
+.projcard-title {
+    font-size: 24px;
+    color: #124474;
+}
+
+.projcard-subtitle {
+    text-align: justify;
+    font-family: 'Voces', 'Open Sans', arial, sans-serif;
+    color: #345777;
+}
+
+.projcard-description {
+
+    text-align: justify;
+    color: #000000;
+}
+
+.projcard-bar {
+    width: 100%;
+    height: 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #124474;
+}
+
+.projcard-color .projcard-bar {
+    background-color: #124474;
+}
+
+/* Accordion styles */
+.tabs {
+    margin: 20px;
+    width: 100%;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px -2px
+     rgba(0, 0, 0, 0.5);
+}
+
+.tab {
+    width: 100%;
+    color: white;
+    overflow: hidden;
+}
+
+.tab-label {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 1.5em;
+    background: #124474;
+    font-weight:bolder;
+    cursor: pointer;
+    border-color: #ffffff;
+    /* Icon */
+}
+
+.tab-label:hover {
+    background: #1a252f;
+}
+
+.tab-label::after {
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    -webkit-transition: all .05s;
+    transition: all .05s;
+}
+
+.tab-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: #000000;
+    background: #b1b1b1;
+    backdrop-filter: blur(1px);
+    -webkit-transition: all .05s;
+    transition: all .05s;
+}
+
+.tab-close {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: #2c3e50;
+    cursor: pointer;
+}
+
+.tab-close:hover {
+    background: #1a252f;
+}
+
+.input_accordion {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.row {
+    display: -webkit-box;
+    display: flex;
+}
+
+.row .col {
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.row .col:last-child {
+    margin-left: 1em;
+}
+
+input:checked+.tab-label {
+    background: #1a252f;
+}
+
+input:checked+.tab-label::after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+input:checked~.tab-content {
+    max-height: 100vh;
+    padding: 1em;
+}
+
+/* Estilos para pantallas pequeñas (teléfonos) */
+@media screen and (max-width: 768px) {
+
+    .projcard-innerbox {
+        flex-direction: column;
+        /* Mostrar la imagen arriba en modo de teléfono */
+    }
+
+    .projcard-img {
+        max-width: 100%;
+        /* Ajusta el tamaño máximo de la imagen para pantallas pequeñas */
+        max-height: auto;
+        /* Ajusta el tamaño máximo de la imagen para pantallas pequeñas */
+    }
+}
+
+@media(max-width:991px) {
+    .formulario-envio {
+        padding: 30px;
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+}

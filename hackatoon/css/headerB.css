@@ -1,0 +1,288 @@
+
+.newnavbar{
+    background-color: #0000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    margin: 0px 0px 15px 0px;
+}
+
+.newnavbar .logo{
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.newnavbar .logo img{
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.newnavbar .logo img:hover{
+    transform: scale(1.2);
+}
+
+.newnavbar .nav-links{
+    list-style: none;
+    margin: 10px;
+}
+
+.newnavbar .nav-links li{
+    display: inline-block;
+    padding: 0 20px;    
+}
+
+.newnavbar .nav-links li:hover,
+/**/.overlay a:hover{
+    transform: scale(1.1);
+}
+
+.newnavbar .nav-links a{
+    font-size: 700;
+    color: #eceff1; 
+}
+
+.newnavbar .nav-links a:hover{
+    color: #ffbc0e;
+}
+
+/**/.menu {
+    display:none;
+}
+
+.newnavbar .btn button,
+/**/.newnavbar .menu button{
+    margin-left: 20px;
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.newnavbar .btn button:hover,
+/**/.newnavbar .menu button:hover{
+    background-color: #e2f1f8;
+    color: #ffbc0e;
+    transform: scale(1.1);
+}
+ 
+
+
+
+/* Estilos para el menú desplegable */
+
+.masthead {
+    padding: 3rem 0 7srem;
+    position: relative;
+    background-color: #124474;
+    background-image: url(https://startbootstrap.com/assets/img/overlay.svg), linear-gradient(45deg, #124474 0%, #1f2023 100%);
+    background-size: cover;    z-index: 0
+}
+
+.masthead svg.wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0
+}
+
+.masthead h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.1;
+    z-index: 1
+}
+
+.masthead h2 {
+    color: rgba(255, 255, 255, .6);
+    font-weight: 600;
+    z-index: 1;
+    font-size: 1.2rem
+}
+
+.masthead a {
+    color: rgba(255, 255, 255, .8);
+    text-decoration: underline;
+    z-index: 1
+}
+
+.masthead a:hover {
+    color: #fff
+}
+
+.masthead a:active {
+    text-decoration: none
+}
+
+@media(min-width:992px) {
+    .masthead h1 {
+        font-size: 3rem
+    }
+    .masthead h2 {
+        font-size: 1.5rem
+    }
+}
+
+.masthead .masthead-cards {
+    position: relative;
+    z-index: 1
+}
+
+.masthead .masthead-cards .shape {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .3);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%
+}
+
+.masthead .masthead-cards .card {
+    opacity: 1;
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: .05rem;
+    color: #212529;
+    transition: .15s all
+}
+
+.masthead .masthead-cards .card:hover {
+    margin-top: -.25rem;
+    margin-bottom: .25rem
+}
+
+.masthead .masthead-cards .card:active {
+    margin-top: inherit;
+    margin-bottom: inherit
+}
+
+.masthead .masthead-cards .card.border-bottom-blue:hover {
+    color: #2092ed
+}
+
+.masthead .masthead-cards .card.border-bottom-green:hover {
+    color: #28a745
+}
+
+.masthead .masthead-cards .card.border-bottom-red:hover {
+    color: #dd3d31
+}
+
+.masthead .masthead-cards .card.border-bottom-yellow:hover {
+    color: #ffc107
+}
+
+.masthead-page {
+    padding: 1rem 0 4rem
+}
+
+@media(min-width:992px) {
+    .masthead-page h1 {
+        font-size: 2.5rem
+    }
+}
+
+.border-bottom-yellow {
+    border-color: #ffc107!important;
+}
+
+.border-bottom-red {
+    border-color: #dd3d31!important;
+}
+
+.border-bottom-blue {
+    border-color: #2092ed!important;
+}
+
+.border-bottom-green {
+    border-color: #28a745!important;
+}
+
+.border-bottom-blue, .border-bottom-green, .border-bottom-red, .border-bottom-yellow {
+    border-bottom: .4rem solid!important;
+}
+.shadow-lg {
+    box-shadow: 0 2rem 1.5rem -1.5rem rgba(33,37,41,.15),0 0 1.5rem .5rem rgba(33,37,41,.05)!important;
+}
+.border-0 {
+    border: 0!important;
+}
+
+/**/@media screen and (max-width: 800px){
+    .nav-links, .btn {
+        display: none;
+    }
+    .menu {
+        display: inherit;
+    }
+}
+
+
+
+/*Nav Mobile*/
+
+.newnavbar a{
+    text-decoration: none;  
+    /*borramos el que teniamos en .newnavbar .nav-links a*/ 
+}
+
+.newnavbar .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(33, 49, 63, .95);
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.newnavbar .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.newnavbar .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: #eceff1;
+}
+
+.newnavbar .overlay a:hover, 
+.newnavbar .overlay a:focus{
+    color: #ffbc0e;
+}
+
+.newnavbar .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+@media screen and (max-height:450px) {
+    .newnavbar .overlay a{
+        font-size: 20px;
+    }
+    .newnavbar .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
