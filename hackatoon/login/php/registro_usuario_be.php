@@ -7,9 +7,9 @@ $correo = $_POST['correo'];
 $usuario = $_POST['usuario'];
 $contrasena = $_POST['contrasena'];
 $contrasena = hash('sha512', $contrasena); // Recomiendo usar algoritmos más seguros para el hash, como bcrypt
-
-$query = "INSERT INTO usuarios (nombre_completo, correo, usuario, contrasena)
-            VALUES ('$nombre_completo', '$correo','$usuario','$contrasena')";
+$cod_rol = 1; 
+$query = "INSERT INTO usuarios (nombre_completo, correo, usuario, contrasena, cod_rol)
+            VALUES ('$nombre_completo', '$correo','$usuario','$contrasena', $cod_rol)";
 
 $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo'");
 $ejecutar = mysqli_query($conexion, $query);

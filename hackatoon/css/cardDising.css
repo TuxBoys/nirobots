@@ -1,18 +1,45 @@
-/* Estilo para el formulario */
-
-
-.form-group {
+.containerSelect {
     text-align: center;
+  }
+  
+  .centered-content {
+    display: inline-block;
+    margin: 20px; /* Ajusta el margen como desees */
+  }
+  
+  
+  .select {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 20px; 
 }
 
-/* Estilo para el título */
-.form-group h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
+.select-wrapper {
+    width: 200px; 
+    margin-right: 10px; 
+    position: relative;
+    overflow: hidden;
+    transition: margin-bottom 0.3s ease; /* Transición suave */
+    margin-bottom: 0;
 }
 
 
-.projcard {
+
+.btn01 {
+    border-radius: 10%;
+    color: #fff;
+    background-color: #5a22ae;
+    cursor: pointer;
+    min-width: 50px;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+
+  
+  .projcard {
     width: calc(100% - 20px);
     height: 650px;
     margin: 10px;
@@ -21,33 +48,33 @@
     overflow: hidden;
     cursor: pointer;
     position: relative;
-}
-
-.projcard-container {
+  }
+  
+  .projcard-container {
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.projcard .btn-primary {
+  }
+  
+  .projcard .btn-primary {
     background-color: #124474;
     position: absolute;
     bottom: 10px; /* 10 píxeles desde el borde inferior */
     left: 70px; /* 10 píxeles desde el borde izquierdo */
     
    
-right: 70px; /* 10 píxeles desde el borde derecho */
-border: none;
-}
-
-.projcard .btn-primary:hover {
+  right: 70px; /* 10 píxeles desde el borde derecho */
+  border: none;
+  }
+  
+  .projcard .btn-primary:hover {
     background-color: #5a22ae;
-}
+  }
    
-
-
-.cards1 {
+  
+  
+  .cards1 {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -55,10 +82,10 @@ border: none;
     word-wrap: break-word;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
-}
-
-/*estilos del formulario de envio*/
-.formulario-envio {
+  }
+  
+  /*estilos del formulario de envio*/
+  .formulario-envio {
     background: linear-gradient(
         50deg,
         rgb(40,42,55,1)20%,
@@ -73,28 +100,28 @@ border: none;
     word-wrap: break-word;
     max-width: 1000px;
     border-radius: 40px;
-}
-
-form {
+  }
+  
+  form {
     display: flex;
     flex-direction: column;
     width: 50%;
-}
-
-.formulario-envio h2 {
+  }
+  
+  .formulario-envio h2 {
     color: #f4f6f9;
     font-size: 25px;
     margin-bottom: 20px;
-}
-
-.label-form {
+  }
+  
+  .label-form {
     font-size: 15px;
     color: #ffff;
     margin-bottom: 20px;
     margin-top: 20px;
-}
-
-input,textarea {
+  }
+  
+  input,textarea {
     padding: 17px 14px;
     border: 0;
     background-color: #6c6d6e;
@@ -102,35 +129,30 @@ input,textarea {
     margin-bottom: 20px;
     border-radius: 20px;
     backdrop-filter: blur(1px);
-}
+  }
+  
 
-.btn-form {
-    margin-top: 20px;
-    width: 150px;
-    align-self: center;
-    display: inline-block;
-}
-
-/*bordes para los input del form*/
-:focus {
+  
+  /*bordes para los input del form*/
+  :focus {
     outline: 2px solid #ffffff;
-}
-
-/*efecto glassing o transparencia */
-.cards1,.projcard {
+  }
+  
+  /*efecto glassing o transparencia */
+  .cards1,.projcard {
     background: rgb(255, 255, 255, 0.1);
     backdrop-filter: blur(1px);
     border-radius: 40px;
-}
-
-/*efecto del cursor para las cards*/
-.projcard:hover, .cards1:hover, input:hover,
-textarea:hover, .btn-form:hover {
+  }
+  
+  /*efecto del cursor para las cards*/
+  .projcard:hover, .cards1:hover, input:hover,
+  textarea:hover, .btn-form:hover {
     box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
     transform: translate(0px, -5px);
-}
-
-.projcard-innerbox {
+  }
+  
+  .projcard-innerbox {
     position: relative;
     display: flex;
     align-items: center;
@@ -139,10 +161,10 @@ textarea:hover, .btn-form:hover {
     /* Mostrar la imagen al lado en modo de escritorio */
     text-align: center;
     /* Centrar el texto en modo de escritorio */
-}
-
-
-.projcard-img {
+  }
+  
+  
+  .projcard-img {
     border-radius: 150px;
     width: 100%;
     max-width: 500px;
@@ -151,68 +173,68 @@ textarea:hover, .btn-form:hover {
     max-height: 450px;
     /* Ajusta el tamaño máximo de la imagen según tus necesidades */
     padding: 40px;
-}
-
-.projcard-textbox {
+  }
+  
+  .projcard-textbox {
     width: 100%;
     font-size: 17px;
     padding: 20px;
     /* Agregar espacio alrededor del texto */
     text-align: center;
     /* Centrar el texto en modo de escritorio */
-}
-
-.projcard-textbox::before,
-.projcard-textbox::after {
+  }
+  
+  .projcard-textbox::before,
+  .projcard-textbox::after {
     display: none;
-}
-
-.projcard-title {
+  }
+  
+  .projcard-title {
     font-size: 24px;
     color: #124474;
-}
-
-.projcard-subtitle {
+  }
+  
+  .projcard-subtitle {
     text-align: justify;
     font-family: 'Voces', 'Open Sans', arial, sans-serif;
     color: #2c2b2b;
-}
-
-.projcard-description {
-
+  }
+  
+  .projcard-description {
+  
     text-align: justify;
     color: #2c2b2b;
-}
-
-.projcard-bar {
+  }
+  
+  .projcard-bar {
     width: 100%;
     height: 5px;
     margin: 10px 0;
     border-radius: 5px;
     background-color: #124474;
-}
-
-.projcard-color .projcard-bar {
+  }
+  
+  .projcard-color .projcard-bar {
     background-color: #124474;
-}
-
-/* Estilos para pantallas pequeñas (teléfonos) */
-@media screen and (max-width: 768px) {
-
+  }
+  
+  /* Estilos para pantallas pequeñas (teléfonos) */
+  @media screen and (max-width: 768px) {
+  
     .projcard-innerbox {
         flex-direction: column;
         /* Mostrar la imagen arriba en modo de teléfono */
     }
-
+  
     .projcard-img {
         max-width: 100%;
         /* Ajusta el tamaño máximo de la imagen para pantallas pequeñas */
         max-height: auto;
         /* Ajusta el tamaño máximo de la imagen para pantallas pequeñas */
     }
-}
-
-@media(max-width:991px) {
+  }
+  
+  @media(max-width:991px) {
     .formulario-envio {
         padding: 30px;
         width: 100%;
@@ -220,4 +242,4 @@ textarea:hover, .btn-form:hover {
     form {
         width: 100%;
     }
-}
+  }

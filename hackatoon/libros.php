@@ -1,6 +1,6 @@
 <?php
-require_once "vistas/headerBiblioteca.php";
-define("KEY_TOKEN", "N1_Rob0t5-77*");
+$header_type ='header1';
+require_once "vistas/header.php";
 
 $ID_Biblioteca = isset($_GET['ID_Biblioteca']) ? $_GET['ID_Biblioteca'] : '';
 $token = isset($_GET['token']) ? $_GET['token'] : '';
@@ -26,9 +26,9 @@ if ($ID_Biblioteca == '' || $token == '') {
             $autor = $row['Autor'];
             $sinopsis = $row['Sinopsis'];
             $fecha = $row['Fecha_Publicacion'];
-            $pdf_url = $row['ruta_pdf']; // Agregamos esta línea para obtener la URL del PDF
+            $pdf_url = $row['ruta_pdf']; 
             $portada_url = $row['PortadaURL'];
-            $ruta_pdf = $row['ruta_pdf']; // Agregamos esta línea para obtener la URL de la portada
+            $ruta_pdf = $row['ruta_pdf']; 
         } else {
             echo 'Error: No se encontraron datos con el ID especificado';
         }
@@ -49,11 +49,10 @@ if ($ID_Biblioteca == '' || $token == '') {
 
 
 
-
-<!-- Section -->
 <div class="container py-5">
+ 
   <div class="row gx-4 gx-lg-5 align-items-center">
-    <!-- Contenido a la izquierda: Título, autor y fecha -->
+    <!-- Contenido -->
     <div class="col-md-6">
       <h6 class="text-muted">Fecha de publicación: <?php echo $fecha; ?></h6>
       <h1 class="display-4 mb-4"><?php echo $titulo; ?></h1>
@@ -61,45 +60,46 @@ if ($ID_Biblioteca == '' || $token == '') {
       <p class="lead mb-4 text-justify">Sinopsis: <?php echo isset($sinopsis) ? $sinopsis : 'Sin sinopsis disponible.'; ?></p>
 
       <!-- Botones para leer y descargar -->
-      <div class="read-buttons">
+      <div class="read-buttons text-center">
         <a href="#pdf-render" class="btn btn-primary btn-lg">Leer ahora</a>
         <a href="<?php echo $pdf_url; ?>" class="btn btn-secondary btn-lg">Descargar</a>
       </div>
     </div>
-    <!-- Imagen a la derecha -->
-    <div class="col-md-6">
-      <div class="book-cover-container text-right">
-        <img class="rounded float-end"
+    
+    <div class="col-md-6 text-center">
+      <img class="rounded"
         src="<?php echo $rutaIMG?>"
-          style="max-width: 70%; height: auto;">
-      </div>
+        style="max-width: 70%; height: auto; margin: 10px auto;">
     </div>
   </div>
 </div>
 
 
-  <div class="container-fluid">
+
+<h2 class="projcard-title text-center mt-4"> Que encuentras sabiduria entre Sus páginas</h2>
+
+<div class="container-fluid">
+
   <div class="row">
-    <div class="col-md-1 mx-auto">
-      <button class="btn btn-primary m-3" id="prev-page">
-        <i class="fas fa-arrow-circle-left"></i> Prev Page
+    <div class="col-md-1 mx-auto text-center">
+      <button class="btn btn-primary custom-btn" id="prev-page">
+        Anterior
       </button>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-10 mx-auto">
-      <canvas id="pdf-render">
-        
+    <div class="col-md-10 mx-auto text-center">
+      <canvas id="pdf-render" class="custom-canvas">
       </canvas>
     </div>
     <span class="page-info text-center">
-        Page <span id="page-num"></span> of <span id="page-count"></span>
+        Página <span id="page-num"></span> de <span id="page-count"></span>
       </span>
   </div>
   <div class="row">
-    <div class="col-md-1 mx-auto">
-      <button class="btn btn-primary m-3" id="next-page">
-        Next Page <i class="fas fa-arrow-circle-right"></i>
+    <div class="col-md-1 mx-auto text-center">
+      <button class="btn btn-primary custom-btn" id="next-page">
+        Siguiente
       </button>
     </div>
   </div>
@@ -114,27 +114,24 @@ if ($ID_Biblioteca == '' || $token == '') {
 
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
     <script>
-    const url = '<?php echo $rutaPDF; ?>';
+     const url = '<?php echo $rutaPDF; ?>';
 
 let pdfDoc = null,
   pageNum = 1,
   pageIsRendering = false,
   pageNumIsPending = null;
 
-const scale = 1.2,
+const scale = 1.7,
   canvas = document.querySelector('#pdf-render'),
   ctx = canvas.getContext('2d');
 
-// Render the page
 const renderPage = num => {
   pageIsRendering = true;
 
-  // Get page
   pdfDoc.getPage(num).then(page => {
-    // Set scale
     const viewport = page.getViewport({ scale });
-    canvas.height = 900;
-    canvas.width = 700;
+    canvas.width = viewport.width;
+    canvas.height = viewport.height;
 
     const renderCtx = {
       canvasContext: ctx,
@@ -150,12 +147,10 @@ const renderPage = num => {
       }
     });
 
-    // Output current page
     document.querySelector('#page-num').textContent = num;
   });
 };
 
-// Check for pages rendering
 const queueRenderPage = num => {
   if (pageIsRendering) {
     pageNumIsPending = num;
@@ -164,7 +159,6 @@ const queueRenderPage = num => {
   }
 };
 
-// Show Prev Page
 const showPrevPage = () => {
   if (pageNum <= 1) {
     return;
@@ -173,7 +167,6 @@ const showPrevPage = () => {
   queueRenderPage(pageNum);
 };
 
-// Show Next Page
 const showNextPage = () => {
   if (pageNum >= pdfDoc.numPages) {
     return;
@@ -182,34 +175,45 @@ const showNextPage = () => {
   queueRenderPage(pageNum);
 };
 
-// Get Document
 pdfjsLib
   .getDocument(url)
   .promise.then(pdfDoc_ => {
     pdfDoc = pdfDoc_;
-
     document.querySelector('#page-count').textContent = pdfDoc.numPages;
-
     renderPage(pageNum);
   })
   .catch(err => {
-    // Display error
-    const div = document.createElement('div');
-    div.className = 'error';
-    div.appendChild(document.createTextNode(err.message));
-    document.querySelector('body').insertBefore(div, canvas);
-    // Remove top bar
-    document.querySelector('.top-bar').style.display = 'none';
+    console.error('Error al cargar el PDF:', err);
   });
+
+// Función para ajustar el canvas según el tamaño de la ventana
+const adjustCanvasSize = () => {
+  const isMobile = window.innerWidth <= 767;
+
+  if (isMobile) {
+    // Establece el ancho del canvas para dispositivos móviles
+    canvas.style.width = '100%';
+  } else {
+    // Establece el ancho del canvas para PC
+    canvas.style.width = '70%';
+  }
+};
+
+// Escucha el evento de cambio de tamaño de la ventana
+window.addEventListener('resize', adjustCanvasSize);
+
+// Ajusta el tamaño del canvas al cargar la página y al cambiar el tamaño de la ventana
+adjustCanvasSize();
 
 // Button Events
 document.querySelector('#prev-page').addEventListener('click', showPrevPage);
 document.querySelector('#next-page').addEventListener('click', showNextPage);
+
     </script>
-</section>
+
 
 
 
 <?php
-require_once "vistas/footer.php";
+require_once "vistas/footerPrincipal.php";
 ?>

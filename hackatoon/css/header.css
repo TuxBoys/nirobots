@@ -24,29 +24,38 @@
     transform: scale(1.2);
 }
 
-.newnavbar .nav-links{
+.newnavbar .nav-bar-links {
     list-style: none;
-    margin: 10px;
+    margin: 0;
+    padding: 0;
+    display: inline-block; /* Cambiamos de display: block a inline-block */
 }
 
-.newnavbar .nav-links li{
-    display: inline-block;
-    padding: 0 20px;    
+.newnavbar .nav-bar-links li {
+    
+   
+display: inline-block; /* Mantenemos display: inline-block */
+    
+   
+padding: 0 20px;
 }
 
-.newnavbar .nav-links li:hover,
-/**/.overlay a:hover{
+.newnavbar .nav-bar-links li:hover {
     transform: scale(1.1);
 }
 
-.newnavbar .nav-links a{
-    font-size: 700;
-    color: #eceff1; 
+.newnavbar .nav-bar-links a {
+    font-size: 16px; /* Cambiamos font-size: 700 a un valor apropiado */
+    color: #eceff1;
+    text-decoration: none; /* Agregamos esta línea para quitar la subraya en los enlaces */
+    display: block; /* Agregamos esto para que los enlaces ocupen todo el espacio del li */
+    padding: 10px 15px; /* Ajustamos el espaciado interno */
 }
 
-.newnavbar .nav-links a:hover{
+.newnavbar .nav-bar-links a:hover {
     color: #ffbc0e;
 }
+
 
 /**/.menu {
     display:none;
@@ -218,12 +227,17 @@
 }
 
 /**/@media screen and (max-width: 800px){
-    .nav-links, .btn {
-        display: none;
+    .newnavbar .logo img {
+        height: 32px; /*Ajusta la altura deseada para el logo en dispositivos móviles */
+    }
+    .newnavbar .nav-bar-links {
+        display: none; /* Oculta la lista en pantallas móviles */
     }
     .menu {
         display: inherit;
     }
+
+    
 }
 
 
@@ -232,7 +246,7 @@
 
 .newnavbar a{
     text-decoration: none;  
-    /*borramos el que teniamos en .newnavbar .nav-links a*/ 
+    /*borramos el que teniamos en .newnavbar .nav-bar-links a*/ 
 }
 
 .newnavbar .overlay {

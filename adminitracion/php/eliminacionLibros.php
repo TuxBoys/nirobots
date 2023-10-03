@@ -18,14 +18,13 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     // Incluye el archivo de conexión a la base de datos
     require 'conexion_be.php';
 
-    // Sanitiza el ID para evitar inyección SQL
     $id = mysqli_real_escape_string($conexion, $_GET['id']);
 
     // Consulta SQL para eliminar el libro
     $sql = "DELETE FROM prueba.libros WHERE ID_Biblioteca = $id";
 
     if (mysqli_query($conexion, $sql)) {
-        // Libro eliminado con éxito, muestra un alert y ofrece opciones
+        // Libro eliminado con éxito
         echo '<script>alert("Libro eliminado con éxito");</script>';
         echo '<p>¿Qué desea hacer?</p>';
         echo '<a href="../eliminarLibros.php" class="btn btn-primary mb-4 mr-4">Volver a la gestión de libros</a>';
@@ -34,7 +33,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         echo "Error al eliminar el libro: " . mysqli_error($conexion);
     }
 
-    // Cierra la conexión a la base de datos
+   
     mysqli_close($conexion);
 } else {
     echo "ID no válido";

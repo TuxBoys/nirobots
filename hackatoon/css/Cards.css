@@ -43,7 +43,7 @@
 /*estilos del formulario de envio*/
 .formulario-envio {
     background: linear-gradient(90deg,
-            rgb(40, 42, 55, 1)30%,
+            rgb(18, 68, 116)30%,
             rgb(40, 42, 55, 0.7)),
         url(/images/psicologia.jpg);
     margin: 40px auto;
@@ -79,8 +79,8 @@ input,
 textarea {
     padding: 17px 14px;
     border: 0;
-    background-color: #6c6d6e;
-    color: #ffff;
+    background-color: #ffffff;
+    color: #000000;
     margin-bottom: 20px;
     border-radius: 20px;
     backdrop-filter: blur(1px);
@@ -101,13 +101,12 @@ textarea {
 /*efecto glassing o transparencia */
 .projcard,
 .cards1 {
-    background: rgb(255, 255, 255, 0.1);
+    background: #124474;
     backdrop-filter: blur(1px);
 }
 
 /*efecto del cursor para las cards*/
 .projcard:hover,
-.cards1:hover,
 input:hover,
 textarea:hover,
 .btn-form:hover {
@@ -153,20 +152,21 @@ textarea:hover,
 }
 
 .projcard-title {
-    font-size: 24px;
-    color: #124474;
+    font-size: 22px;
+    color: #ffffff;
 }
 
 .projcard-subtitle {
     text-align: justify;
     font-family: 'Voces', 'Open Sans', arial, sans-serif;
-    color: #345777;
+    color: #9dbcda;
+    font-size: 16px;
 }
 
 .projcard-description {
-
     text-align: justify;
-    color: #000000;
+    color: #ffffff;
+    font-size: 16px;
 }
 
 .projcard-bar {
@@ -174,7 +174,7 @@ textarea:hover,
     height: 5px;
     margin: 10px 0;
     border-radius: 5px;
-    background-color: #124474;
+    background-color: #ffffff;
 }
 
 .projcard-color .projcard-bar {
@@ -187,8 +187,7 @@ textarea:hover,
     width: 100%;
     border-radius: 40px;
     overflow: hidden;
-    box-shadow: 0 4px 4px -2px
-     rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
 }
 
 .tab {
@@ -204,7 +203,7 @@ textarea:hover,
     justify-content: space-between;
     padding: 1.5em;
     background: #124474;
-    font-weight:bolder;
+    font-weight: bolder;
     cursor: pointer;
     border-color: #ffffff;
     /* Icon */
@@ -219,8 +218,8 @@ textarea:hover,
     width: 1em;
     height: 1em;
     text-align: center;
-    -webkit-transition: all .05s;
-    transition: all .05s;
+    -webkit-transition: all .35s;
+    transition: all .35s;
 }
 
 .tab-content {
@@ -229,7 +228,7 @@ textarea:hover,
     color: #000000;
     background: #b1b1b1;
     backdrop-filter: blur(1px);
-    -webkit-transition: all .05s;
+    -webkit-transition: all .35s;
     transition: all .05s;
 }
 

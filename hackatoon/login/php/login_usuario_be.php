@@ -12,18 +12,37 @@ if (mysqli_num_rows($validar_login) > 0) {
     $row = mysqli_fetch_assoc($validar_login);
     if ($row['contrasena'] === $contrasena) {
         $_SESSION['usuario'] = $correo;
+        $rol = $row['cod_rol'];
 
-        $fecha_actual = date('Y-m-d H:i:s');
-        $update_usuario = mysqli_query($conexion, "UPDATE usuarios SET ultimo_acceso = '$fecha_actual' WHERE correo='$correo'");
-
-        if (!$update_usuario) {
-            die("Error al actualizar el usuario: " . mysqli_error($conexion));
+       
+        switch ($rol) {
+            case 1:
+                header("location: ../../index.php");
+                break;
+            case 2:
+                header("location: ../../../adminitracion/index.php");
+                break;
+            case 3:
+                 ///Espacio para moderador (Trabajando en ello)
+            default:
+                echo"Error xD";
+                
+                break;
         }
-        header("location: ../../index01.php");
         exit;
     }
-} else {
-    echo $contrasena;
+}
+else {
+    
+    echo '
+         <script>
+         alert ("Contraseña o usuario invalido, vuelva intenarlo")ñ
+         windows.location = "../index.php"
+         </script>
+    ';
+    
     exit;
 }
 ?>
+
+

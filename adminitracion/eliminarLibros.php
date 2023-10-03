@@ -36,13 +36,12 @@ require_once "vistas/header.php"; ?>
 
     <script>
         document.getElementById('busqueda-form').addEventListener('submit', function (event) {
-            event.preventDefault(); // Evitar que el formulario se envíe de manera tradicional
-            
+            event.preventDefault(); 
             // Obtener los valores del formulario
             var criterio = document.getElementById('criterio').value;
             var busqueda = document.getElementById('busqueda').value;
 
-            // Realizar una solicitud AJAX para buscar y obtener los resultados
+            // ajax para busqueda 
             var xhr = new XMLHttpRequest();
             xhr.open('GET', 'php/busqueda.php?criterio=' + criterio + '&busqueda=' + busqueda, true);
             xhr.onreadystatechange = function () {

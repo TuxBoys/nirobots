@@ -1,0 +1,38 @@
+
+ 
+ 
+ .containerSelect {
+  text-align: center;
+}
+
+.centered-content {
+  display: inline-block;
+  margin: 20px; /* Ajusta el margen como desees */
+}
+
+/* Estilos para el botón y el select */
+.select {
+  display: inline-flex;
+  align-items: center;
+ 
+  margin-left: 20px; /* Márgenes entre el label y el select */
+}
+
+.select-wrapper {
+    width: 500px; /* Ajusta el ancho del select según tus preferencias */
+
+  margin-right: 10px; /* Márgenes entre el select y el botón */
+}
+
+.btn01 {
+  color: #fff;
+  background-color: #5a22ae;
+  cursor: pointer;
+  min-width: 50px;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  outline: none;
+  
+}
+ 

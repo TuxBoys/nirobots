@@ -1,5 +1,13 @@
 <?php
-    require_once "vistas/headerEmpresas.php";
+    $header_type = 'header2';
+    require_once "vistas/header.php";
+
+    $query = "SELECT id_empresa, nombre_empresa, descripcion, ubicacion, foto_empresa FROM empresa";
+    $stmt = $conexion->prepare($query);
+    $stmt->execute();
+    $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    
 ?>
 
         <div class="container py-5">
@@ -8,36 +16,30 @@
         <main>
             <div class="row">
             <h1 class="hero__title" id = "Explora">Seccion de empresas</h1>
-                <div class="projcard-container">
-                    <div class="projcard projcard-color ">
+                <?php foreach ($resultado as $row){
+                    $rutaIMG = '../adminitracion/imagenesServidor/imagenesEmpresas/' . $row['foto_empresa'];
+                    $url = "servicios.php?id_empresa={$row['id_empresa']}&token=" . hash_hmac('sha1', $row['id_empresa'], KEY_TOKEN);
+                    ?>
+                
+
+                        <div class="projcard projcard-color glass">
                         <div class="projcard-innerbox">
-                            <img class="projcard-img" src="images/Empresas/ossur.png" />
+                            <img class="projcard-img" src="<?php echo $rutaIMG?>" />
                             <div class="projcard-textbox">
-                                <div class="projcard-title">Ossur</div>
-                                <div class="projcard-subtitle">Fundada en 1971, Össur cuenta con una amplia experiencia
-                                    en el desarrollo, la producción y la venta de ortopedia no invasiva.</div>
+                                <div class="projcard-title"><?php echo $row['nombre_empresa']; ?></div>
+                                <div class="projcard-subtitle"><?php echo $row['ubicacion']; ?></div>
                                 <div class="projcard-bar"></div>
-                                <div class="projcard-description">
-                                    Össur se dedica a mejorar la movilidad de las personas. Como empresa líder en
-                                    ortopedia no invasivas, proporcionamos avanzada e innovadora tecnología en los
-                                    campos de prótesis, ortesis y terapia de compresión.
-
-                                    Firmes en la consecución de nuestros objetivo, restaurar la función biólogica a
-                                    aquellos que la necesitan, Össur tiene más de treinta años de experiencia en el
-                                    diseño y producción de dispositivos ortopédicos de alta tecnología.
-
-                                    Sin embargo, nuestro trabajo se centra más en las personas que en los productos. Su
-                                    comodidad, confianza y rehabilitación centran nuestros esfuerzos. No podemos olvidar
-                                    que cada vez que desarrollamos un producto o servicio, estamos ayudando a alguien a
-                                    mejorar su calidad de vida. No puede haber un negocio mejor.
-                                </div>
-                                <br><a href="https://www.ossur.com/es-es/protesis/information/protesis-bionicas"
-                                    class="btn btn-primary">ir a la pagina</a>
+                                <p class="projcard-description">
+                                <?php echo $row['descripcion']; ?>
+                                </p>
+                                <br><a href="<?php echo $url; ?>" class="btn btn-primary">ir a la pagina</a>
                             </div>
                         </div>
+                    </div><br>
+                    <?php  } ?>
                     </div> <br>
 
-                    <div class="projcard projcard-color">
+                    <!--<div class="projcard projcard-color">
                         <div class="projcard-innerbox">
                             <div class="projcard-textbox">
                                 <div class="projcard-title">Ottobock</div>
@@ -92,7 +94,7 @@
                         </div>
                     </div><br>
                 </div>
-                <br><br>
+                <br><br> -->
                 
 
             </div>

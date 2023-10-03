@@ -1,50 +1,56 @@
 <?php
-    require_once "vistas/headerPrincipal.php";
+    $header_type = 'header3';
+    require_once "vistas/header.php";
 ?>
+
+<body>
+    <div class="row">
+        <div class="col-12">
             <main>
                 <section class="projcard-container">
-                    <h1 class="hero__title">¿Quienes somos y como podemos ayudarte?</h1> <br> <br>
+                    <h1 class="title">¿Quienes somos y como podemos ayudarte?</h1> <br> <br>
                     <div class="text_cont">
                         <div class="text_container">
                             <div class="text">
-
-                                <p class="projcard-description">
+                                <p>
                                     Nosotros somos Ni.Robots, somos un sitio web en donde ayudamos a las personas a con
-                                    alguntipode amputacion a mejorar sus vidas, sabemos que La amputación es una causa
-                                    de
-                                    discapacidad motriz en nuestro país en donde se indicaba que el 36% de las personas
-                                    con discapacidades
-                                    corresponden a amputaciones de extremidades superiores e inferiores. En esta pagina
-                                    podras tener
-                                    asistencia personalizada y encontrar las mejores opciones sobre protesis fabricadas
-                                    por
-                                    empresas nacionales e internacionales que se adapten a tu presupuesto para adquirir
-                                    una protesis
-                                    a amputaciones de extremidades superiores e inferiores. En esta pagina podras tener
-                                    asistencia personalizada y encontrar las mejores opciones sobre protesis fabricadas
-                                    por
-                                    empresas nacionales e internacionales que se adapten a tu presupuesto para adquirir
-                                    una protesis
+                                    algun tipode amputacion a mejorar sus vidas, sabemos que La amputación es una causa
+                                    de discapacidad motriz en nuestro país en donde se indicaba que el 36% de las
+                                    personas
+                                    con discapacidades corresponden a amputaciones de extremidades superiores e
+                                    inferiores
+                                    por esta creamos esta iniciativa en donde por medio de esta pagina podras informarte
+                                    en
+                                    nuestra biblioteca virtual con libros elegidos de manera que puedan ayudarte con el
+                                    proceso
+                                    de adaptacion, al igual que podras tener tenera sistencia personalizada con un
+                                    equipo
+                                    especializado
+                                    y encontrar las mejores opciones sobre protesis fabricadas porempresas nacionales e
+                                    internacionales
+                                    que se adapten a tu presupuesto para adquirir una protesis a amputaciones de
+                                    extremidades
+                                    superiores e inferiores.
                                 </p>
                             </div>
 
                         </div>
                         <div class="text-img_container">
-                            <img class="text-img" src="images/brazo white.jpg" alt="">
+                            <img class="text-img" src="images/isotipo.png" alt="" width="20px">
                         </div>
                     </div>
                 </section>
-                <h1 class="hero__title">¿Que hacemos?</h1>
+                <h1 class="title">¿Que hacemos?</h1>
                 <section class="about__main">
 
                     <div class="cards1">
                         <img src="images/cooperacion.jpeg" class="card-img-top" alt="..." height="160px">
                         <div class="card-body">
-                            <h5 class="projcard-title">Cooperación</h5>
+                            <h5 class="projcard-title">Cooperacion</h5>
                             <div class="projcard-bar"></div>
 
                             <p class="projcard-description">
-                                nos enorgulleceria trabajar de la mano con socios estratégicos, incluyendo programas
+                                Nos enorgulleceria trabajar de la mano con socios estratégicos, incluyendo programas
                                 gubernamentales y empresas nacionales como <strong>Feconori, MINED, Intur, MINSA
                                 </strong>.
                                 Trabajando en conjunto, ampliamos nuestro impacto y contribuimos al progreso y bienestar
@@ -55,10 +61,10 @@
                     <div class="cards1">
                         <img src="images/formacion.jpg" class="card-img-top" alt="..." height="160px">
                         <div class="card-body">
-                            <h5 class="projcard-title">Formación</h5>
+                            <h5 class="projcard-title">Formacion</h5>
                             <div class="projcard-bar"></div>
                             <p class="projcard-description">
-                                Constamos con una biblioteca virtual en donde encontrarás una colección de libros,
+                                Contamos con una biblioteca virtual en donde encontrarás una colección de libros,
                                 articulos, audiolibros y recursos multimedia, todos ellos cuidadosamente seleccionados
                                 para abordar temas relacionados con la discapacidad, la inclusión y las herramientas }
                                 disponibles para superar barreras en el ámbito educativo y cultural.
@@ -68,10 +74,10 @@
                     <div class="cards1">
                         <img src="images/empresas header.jpg" class="card-img-top" alt="..." height="160px">
                         <div class="card-body">
-                            <h5 class="projcard-title">Catalogo de productos </h5>
+                            <h5 class="projcard-title">catalogo de productos </h5>
                             <div class="projcard-bar"></div>
                             <p class="projcard-description">
-                                Cacilitamos el conocimiento de opciones sobre los distintos productos como protesis y
+                                Facilitamos el conocimiento de opciones sobre los distintos productos como protesis y
                                 ortesis al
                                 al igual de las distintas empresas que trabajan con tecnologias que
                                 hacen posible la fabricacion de protesis roboticas.
@@ -86,13 +92,16 @@
                             <p class="projcard-description">
                                 Brindamos servicio de atencion psicologica durante el proceso de recuperacion
                                 al momento en que la persona se realiza una amputacion o esta en camino a recontruir su
-                                vidacon su nueva condicion. Por medio de nosotros podras contactar con un equipo de especialistas
-                                que podran brindar la atencion adecuada para las personas con distintis tipos de discapacidades fisicas
+                                vidacon su nueva condicion. Por medio de nosotros podras contactar con un equipo de
+                                especialistas
+                                que podran brindar la atencion adecuada para las personas con distintis tipos de
+                                discapacidades
+                                fisicas
                             </p>
                         </div>
                     </div>
                 </section><br><br>
-                <h1 class="hero__title">Conoce los distintos programas y organizaciones nacionales para personas
+                <h1 class="title">Conoce los distintos programas y organizaciones nacionales para personas
                     discapacitadas</h1><br><br>
                 <section class="projcard-container">
                     <div class="tabs">
@@ -194,173 +203,44 @@
                         </div>
                     </div>
 
-                </section><br>
-                <h1 class="hero__title">¿Con quienes cooperamos?</h1>
+                </section>
+                <h1 class="title">¿Con quienes cooperamos?</h1>
                 <section class="about__main">
                     <div class="only-text-container">
                         <div class="only-text">
-                            <p class="projcard-description">
+                            <p class="only-text-description">
                                 En cuanto a mecanismos de cooperación, la Ley No. 763/2011 señala que “El Estado
                                 gestionará fondos de la cooperación internacional para que en conjunto con el esfuerzo
                                 fiscal se garantice la aplicación de la presente Ley” (Asamblea Nacional, 2011, artículo
-                                7º). Por ello, en Ni.Roborts a través de alianzas estratégicas realizadas y coordinadas por el
-                                Ministerio de Salud, MEFCA y demas organismos nacionales e internacionales brindamos atencion y servicio para las personas con discapacidad, que pueden ser
+                                7º). Por ello, en Ni.Roborts a través de alianzas estratégicas realizadas y coordinadas
+                                por el
+                                Ministerio de Salud, MEFCA y demas organismos nacionales e internacionales brindamos
+                                atencion y
+                                servicio para las personas con discapacidad, que pueden ser
                                 en especie, o mediante capacitaciones y programas.
                                 Entre las organizaciones e instituciones cooperantes se encuentran:
-                                <li>Metanoia, Free Wheel Chair Mission. Sillas de ruedas y capacitación a usuarios</li> 
+                                <li>Metanoia, Free Wheel Chair Mission. Sillas de ruedas y capacitación a usuarios</li>
                                 <li>Visión Mundial. Ayudas técnicas</li>
                                 <li>American Nicaraguan Foundation (ANF). Ayudas técnicas</li>
                                 <li>MoveAbility. Capacitaciones, actividades educativas y apoyo en la compra de
-                                    materiales y equipos</li> 
+                                    materiales y equipos</li>
                                 <li>Misión Cristiana para Ciegos (CBM) y ASOPIECAD. Promoción y capacitación
                                     sobre las estrategias del DIBC además de capacitación al personal de salud
-                                    en materia de discapacidad</li> 
+                                    en materia de discapacidad</li>
 
-                                <li>May Flower. Equipamiento de clínicas audiológicas</li> 
+                                <li>May Flower. Equipamiento de clínicas audiológicas</li>
                                 <li>Fondo de Naciones Unidas para la Infancia (UNICEF) y Organización
                                     Panamericana de la Salud (OPS). Capacitación al personal de salud en
-                                    materia de discapacidad e infancia con discapacidad</li> 
+                                    materia de discapacidad e infancia con discapacidad</li>
                                 <li>Ayuntamiento de Pallafolls, España. Creación del Centro de Atención Psicosocial</li>
                                 <li>República de Cuba. Aporte importante al estudio “Todos con Voz” y la
-                                    participación de médicos cubanos</li> 
+                                    participación de médicos cubanos</li>
                             </p>
                         </div>
                     </div>
                 </section>
-                <!--<section class="projcard-container">
-                    <div class="text_cont">
-                        <div class="text_container">
-                            <div class="text">
-                                <h2 class="projcard-title" id="entendemos">¿Por que queremos ayudarte?</h2> <br> <br>
-                                <p class="projcard-description">
-                                    El concepto “discapacidad” es comúnmente utilizado por la sociedad en general para
-                                    designar a aquellas personas que tienen alguna dificultad, en mayor o menor grado,
-                                    al
-                                    realizar
-                                    actividades cotidianas, sin embargo, esta acepción social no es suficiente para
-                                    comprender de mejor manera este complejo tema <br><br>
-                                    Si tomamos una prótesis de brazo o de pierna; en el caso del brazo tienen como
-                                    muchos
-                                    tres grados de libertad lo que contrasta por completo con un brazo humano que tiene
-                                    más
-                                    de 25 grados de libertad y por lo tanto una mayor destreza, además de la habilidad
-                                    de
-                                    determinar si algo está frío o caliente. Por esta razón el hombre ha querido mejorar
-                                    las
-                                    condiciones de las prótesis y permitir que muchas más personas las puedan adquirir,
-                                    usar
-                                    y manejar. <br> <br>
-                                </p>
-                            </div>
-
-                        </div>
-                        <div class="text-img_container">
-                            <img class="text-img" src="/images/computer.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="text_cont">
-                        <div class="text_container">
-                            <div class="text">
-                                <h2 class="projcard-title">¿Que son las protesis roboticas y como estas pueden
-                                    mejorar tu vida?</h2> <br> <br>
-                                <p class="projcard-description">
-                                    Las prótesis están definidas como una noción que procede de la lengua griega. El
-                                    término
-                                    se emplea en el campo de la medicina para nombrar la reparación artificial de un
-                                    órgano, o
-                                    de una porción de él, que se encuentra ausente en el cuerpo del paciente. <br> <br>
-                                    Considerando la definición citada en el párrafo anterior, podemos definir a una
-                                    prótesis
-                                    robótica, como "un elemento artificial dotado de cierta autonomía e inteligencia
-                                    capaz
-                                    de realizar una función de una parte faltante del cuerpo". Dicha autonomía e
-                                    inteligencia
-                                    se logra al integrar, actuadores, sensores, procesadores y complejos algoritmos de
-                                    control.
-                                    De
-                                    acuerdo a esta definición, las prótesis de uso cosmético quedan completamente
-                                    excluidas,
-                                    como
-                                    por
-                                    ejemplo los ojos de vidrios, las piernas de madera, etc. <br> <br>
-                                    La necesidad de crear prótesis se dio por consecuencias de accidentes, cáncer, males
-                                    formaciones, etc. Pero lo que impulsó a la creación de dichas prótesis es el querer
-                                    mejorar las condiciones de vida de los sobrevivientes en guerra. Por otra parte, la
-                                    robótica
-                                    es
-                                    la
-                                    rama de varias ingenierías como lo pueden ser; la ingeniería mecatrónica, la
-                                    ingeniería
-                                    electrónica, la ingeniería eléctrica, la ingeniería mecánica y la Ingeniería
-                                    Biomédica,
-                                    también
-                                    es la
-                                    rama de la ciencia de computación que se puede aplicar en los robots. En este caso
-                                    la
-                                    veremos
-                                    aplicada en las prótesis. <br> <br>
-                                </p>
-                            </div>
-
-                        </div>
-                        <div class="text-img_container">
-                            <img class="text-img" src="/images/computer.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="text_cont">
-                        <div class="text_container">
-                            <div class="text">
-                                <h2 class="projcard-title">¿Qué se sabe sobre este tipo de protesis?</h2> <br>
-                                <p class="projcard-description">
-                                    La biomecatrónica es la ciencia que intenta unir al hombre a las
-                                    máquinas y ha facilitado la aparición de prótesis robóticas o también llamadas
-                                    biónicas.
-                                    En las últimas décadas hay habido grandes hitos en el desarrollo protésico que han
-                                    permitido
-                                    importantes avances en la calidad de este
-                                    tipo de prótesis En el caso de las prótesis, la tecnología se utiliza para mejorar
-                                    la
-                                    funcionalidad, durabilidad y biocompatibilidad de los dispositivos. <br> <br>
-                                    Por ejemplo, se pueden utilizar materiales como fibra de carbono super ligera
-                                    para recubrir las superficies de las prótesis, lo que puede reducir la fricción,
-                                    prevenir la acumulación de bacterias y mejorar la integración con los tejidos del
-                                    cuerpo.
-                                    Además, la
-                                    nanotecnología también ha sido utilizada en la fabricación de sensores y actuadores
-                                    para prótesis. Estos dispositivos pueden ser extremadamente pequeños y sensibles, lo
-                                    que
-                                    permite una mejor interacción entre la prótesis y el cuerpo del usuario. <br> <br>
-                                    La necesidad de crear prótesis se dio por consecuencias de accidentes, cáncer, males
-                                    formaciones, etc. Pero lo que impulsó a la creación de dichas prótesis es el querer
-                                    mejorar las condiciones de vida de los sobrevivientes en guerra. Por otra parte, la
-                                    robótica
-                                    es la rama de varias ingenierías como lo pueden ser; la ingeniería mecatrónica, la
-                                    ingeniería
-                                    electrónica, la ingeniería eléctrica, la ingeniería mecánica y la Ingeniería
-                                    Biomédica,
-                                    también
-                                    es la
-                                    rama de la ciencia de computación que se puede aplicar en los robots. En este caso
-                                    la
-                                    veremos
-                                    aplicada en las prótesis. <br> <br>
-                                    Esta tecnología ha avanzado a pasos agigantados y siempre con el mismo objetivo, el
-                                    de
-                                    facilitar de alguna manera la vida del ser humano, es así que surge la necesidad de
-                                    reemplazar
-                                    con
-                                    aparatos robóticos alguna extremidad del cuerpo o mejorar la movilidad del mismo.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="text-img_container">
-                            <img class="text-img" src="/images/computer.jpg" alt="">
-                        </div>
-                    </div>
-                </section>-->
                 <section class="about__main">
-                    <h1 class="hero__title">Descrube más sobre las opciones que están a tu disposición</h1>
-
+                    <h1 class="title">Descrube mas sobre las opciones que estan a tu dispocicion</h1>
                 </section>
                 <section class="knowledge">
                     <div class="knowledge__container container">
@@ -375,7 +255,7 @@
                                 testimoniosde personas que han cambiado su vida gracias a las protesis roboticas
 
                             </p> <br>
-                            <a href="biblioteca virtual.html" class="btn btn-primary">Descubrelo
+                            <a href="biblioteca.php" class="btn btn-primary">Descubrelo
                                 aqui</a>
                         </div>
                         <section class="knowledge__picture">
@@ -390,24 +270,24 @@
                             <img src="./images/knowledge.jpeg" class="knowledge__img">
                         </section>
                         <div class="knowledege__texts">
-                            <h2 class="projcard-title">Hecha un vistazo a nuestra sección de productos</h2> <br>
+                            <h2 class="projcard-title">Hecha un vistazo a nuestra seccion de productos</h2> <br>
                             <p class="projcard-description">
                                 Tu bienestar y comodidad son nuestra principal prioridad. Te invitamos a explorar
                                 nuestra sección de productos empresas y de prótesis robóticas y a contactarnos si
                                 necesitas ayuda
                                 en el proceso de selección. Estamos aquí para apoyarte en tu camino hacia una vida
-                                activa y plena con la prótesis adecuada a la ves que puedes informarte sobre estas 
+                                activa y plena con la prótesis adecuada a la ves que puedes informarte sobre estas
                                 nuevas tecnologias y como estas mejoran las vidas de las personas que las usan
                             </p> <br>
-                            <a href="empresas.html" class="btn btn-primary">Descubrelo
+                            <a href="empresas.php" class="btn btn-primary">Descubrelo
                                 aqui</a>
                         </div>
                     </div>
                 </section>
-
-               
             </main>
- 
+        </div>
+    </div>
+</body>
 <?php
     require_once "vistas/footerPrincipal.php";
 ?>

@@ -1,0 +1,65 @@
+/* Estilos generales */
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+.pdf-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200%;
+  max-width: 1000px; /* Ajusta el ancho máximo según tus preferencias */
+  position: relative;
+}
+
+.btn01 {
+  color: #fff;
+  background-color: #5a22ae;
+  cursor: pointer;
+  min-width: 50px; /* Ajusta el ancho mínimo según tus preferencias */
+  text-align: center;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.pdf {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Estilos para pantallas de PC */
+@media (min-width: 768px) {
+  .row {
+    display: flex;
+    align-items: center;
+  }
+  .col-md-1,
+  .col-md-10 {
+    flex: 1;
+  }
+  .col-md-1 {
+    text-align: right;
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  .row {
+    flex-direction: column;
+  }
+  .col-md-1,
+  .col-md-10 {
+    width: 100%;
+  }
+  .col-md-1 {
+    text-align: center;
+    margin-top: 10px;
+  }
+}

@@ -104,8 +104,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Editar empresa</h6>
-                        <a class="collapse-item" href="#">Insertar empresas</a>
-                        <a class="collapse-item" href="#">Insertar servicios</a>
+                        <a class="collapse-item" href="incersionEmpresas.php">Insertar empresas</a>
+                        <a class="collapse-item" href="incersionServicios.php">Insertar servicios</a>
                         <a class="collapse-item" href="#">Editar/Eliminar </a>
                         <a class="collapse-item" href="#">E/D Servicios</a>
                     </div>

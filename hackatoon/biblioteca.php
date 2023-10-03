@@ -1,5 +1,7 @@
 <?php
-require_once "vistas/headerBiblioteca.php";
+$header_type = 'header1';
+require_once "vistas/header.php";
+
 
 // Verifica si se ha enviado el formulario para filtrar por categoría
 if (isset($_POST['criterio']) && $_POST['criterio'] !== 'Todos') {
@@ -21,21 +23,23 @@ if (isset($_POST['criterio']) && $_POST['criterio'] !== 'Todos') {
 
 $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
-<?php
-define("KEY_TOKEN", "N1_Rob0t5-77*");
-?>
+
 
 <br><br>
 
+
+
 <div class="container">
-    <div class="containerSelect">
-        <form method="post">
-            <div class="form-group mx-auto centered-content"> <!-- Utilizamos mx-auto para centrar horizontalmente -->
-                <label for="criterio" class="mx-3 mt-2 mb-3">
-                    <h2>Selecciona qué tipo de libro deseas leer.</h2>
-                </label>
-                <div class="select">
-                    <select class="form-control mx-auto" id="criterio" name="criterio">
+
+<div class="containerSelect">
+    <form method="post">
+        <div class="form-group mx-auto centered-content">
+            <label for="criterio" class="mx-3 mt-2 mb-3">
+                <h2>Selecciona qué tipo de libro deseas leer.</h2>
+            </label>
+            <div class="select">
+                <div class="select-wrapper">
+                    <select class="form-control mx-auto" id="criterio" name="criterio" autofocus>
                         <option value="Todos">Todos</option>
                         <option value="Infantil">Infantil</option>
                         <option value="Adultos">Adultos</option>
@@ -44,18 +48,9 @@ define("KEY_TOKEN", "N1_Rob0t5-77*");
                 </div>
                 <button type="submit" class="btn01">Filtrar</button>
             </div>
-        </form>
-    </div>
-
-    <br>
-    <br>
-    <br>
-
-
-
-
-
-
+        </div>
+    </form>
+</div>
     <div class="row">
         <?php
         $counter = 1; // Inicializamos un contador
@@ -65,7 +60,7 @@ define("KEY_TOKEN", "N1_Rob0t5-77*");
             $rutaIMG = '../adminitracion/imagenesServidor/' . $row['PortadaURL'];
             $isLarge = ($patternCounter < 1); // 1 grande seguido de 6 delgados o viceversa
             ?>
-            <div class="col-md-<?php echo ($isLarge) ? '6' : '3'; ?>">
+            <div class="about main col-md-<?php echo ($isLarge) ? '6' : '3'; ?>">
                 <div class="projcard">
                     <img class="card-img-top" src="<?php echo $rutaIMG ?>" style="height: <?php echo ($isLarge) ? '300px' : '150px'; ?>;
                                object-fit: cover; border-radius: 40px 40px 0 0">
@@ -87,13 +82,12 @@ define("KEY_TOKEN", "N1_Rob0t5-77*");
                     </div>
                 </div>
             </div>
-            <?php
-            $counter++; // Incrementamos el contador en cada iteración
-            $patternCounter++; // Incrementamos el contador de patrón
-            // Verificar si hemos llegado al final del patrón
-            if ($patternCounter == 9) {
-                $patternCounter = 0; // Reiniciamos el contador de patrón después de 7 elementos
-            }
+            <?php $counter++; // Incrementamos el contador en cada iteración
+                $patternCounter++; // Incrementamos el contador de patrón
+                // Verificar si hemos llegado al final del patrón
+                if ($patternCounter == 9) {
+                    $patternCounter = 0; // Reiniciamos el contador de patrón después de 7 elementos
+                }
         }
 
 
@@ -118,5 +112,5 @@ define("KEY_TOKEN", "N1_Rob0t5-77*");
 </div>
 
 <?php
-require_once "vistas/footer.php";
+require_once "vistas/footerPrincipal.php";
 ?>

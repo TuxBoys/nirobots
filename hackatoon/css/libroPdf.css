@@ -1,0 +1,75 @@
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+  }
+  
+  .pdf-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300%;
+    max-width: 1000px; /* Ajusta el ancho máximo según tus preferencias */
+    position: relative;
+  }
+  
+  .custom-btn.btn {
+    background-color: #5a22ae;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    
+   
+  cursor: pointer;
+    border-radius: 30px;
+  }
+  
+
+/* Estilo personalizado para el lienzo del PDF */
+.custom-canvas {
+  border: 1px solid #ccc;
+  max-width: 100%;
+}
+
+/* Estilo personalizado para la información de la página */
+.page-info {
+  font-size: 16px;
+  margin-top: 10px;
+  display: block;
+}
+  
+  .pdf {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Definición de clases de margen personalizadas */
+
+  
+  
+  @media (max-width: 767px) {
+    .container-fluid {
+      flex-direction: column;
+    }
+  
+    .pdf-container {
+      flex-direction: column;
+      width: 100%;
+      max-width: none;
+    }
+  
+    .pdf {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .btn01 {
+      min-width: 100%;
+      margin-top: 10px;
+    }
+  }

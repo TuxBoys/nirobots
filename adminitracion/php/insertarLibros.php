@@ -84,7 +84,7 @@ if (isset($_FILES['archivo']) && isset($_FILES['Imagen'])) {
     <div class="row justify-content-center">
         <div class="col-md-6 text-center">
             <div class="p-4 bg-light rounded">
-                <img src="../img/icons8-libro.gif" alt="Libro GIF" class="img-fluid" width="100px">
+                
             
                 </div>
         </div>

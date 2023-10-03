@@ -18,9 +18,6 @@ if (!$result) {
 $row = mysqli_fetch_assoc($result);
 
 
-
-
-
     
 ?>
 
